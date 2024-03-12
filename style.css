@@ -1,0 +1,35 @@
+.pulsing-image-container {
+  width: 100%; /* Set the width of the container to match the desired size of the image */
+  height: 100%; /* Set the initial height of the container to zero */
+  padding-bottom: 100%; /* Set the aspect ratio of the container to match the image's aspect ratio */
+  position: relative; /* Position the container relative to its normal position */
+  overflow: hidden; /* Hide any overflow outside the container */
+  border-radius: 20px;
+}
+
+.pulsing-image {
+  position: absolute; /* Position the image absolutely within the container */
+  top: 50%; /* Center the image vertically within the container */
+  left: 50%; /* Center the image horizontally within the container */
+  transform: translate(-50%, -50%) scale(1); /* Translate the image to the center of the container and set its initial scale to 1 */
+  animation: pulse 2s ease-in-out infinite; /* Apply the pulse animation to the image */
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+h1{
+  text-align: center;
+  color: red;
+}
+
+h2{
+  text-align: center;
+}
+
+body{
+  background: coral;
+}
